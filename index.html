@@ -18,14 +18,14 @@
 
   <style>
     :root {
-      --brown: #5B4636;
-      --cream: #F5EFE6;
-      --green: #6A9C89;
-      --text: #374151;
-      --beige: #EADFD0;
+      --brown: #1E3A5F;
+      --cream: #FFFFFF;
+      --green: #2FA36B;
+      --text: #6B7280;
+      --beige: #F3F4F6;
       --white: #ffffff;
-      --shadow: 0 18px 40px rgba(91, 70, 54, 0.12);
-      --shadow-soft: 0 10px 25px rgba(55, 65, 81, 0.08);
+      --shadow: 0 18px 40px rgba(30, 58, 95, 0.12);
+      --shadow-soft: 0 10px 25px rgba(30, 58, 95, 0.08);
       --radius-lg: 24px;
       --radius-md: 18px;
       --radius-sm: 14px;
@@ -140,7 +140,7 @@
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(106, 156, 137, 0.25);
+      box-shadow: 0 16px 30px rgba(47, 163, 107, 0.22);
     }
 
     .btn-secondary {
@@ -152,71 +152,6 @@
     .btn-secondary:hover {
       transform: translateY(-2px);
       background: rgba(255, 255, 255, 0.45);
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(14px);
-      background: rgba(245, 239, 230, 0.88);
-      border-bottom: 1px solid rgba(91, 70, 54, 0.08);
-    }
-
-    .header-inner {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand-name {
-      font-family: 'Playfair Display', serif;
-      color: var(--brown);
-      font-size: 1.4rem;
-      line-height: 1;
-    }
-
-    .brand-role {
-      color: var(--text);
-      font-size: 0.86rem;
-      opacity: 0.85;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      color: var(--brown);
-      font-weight: 600;
-      font-size: 0.95rem;
-      position: relative;
-    }
-
-    .nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 0;
-      height: 2px;
-      background: var(--green);
-      transition: width var(--transition);
-    }
-
-    .nav a:hover::after {
-      width: 100%;
     }
 
     .hero {
@@ -278,7 +213,7 @@
       position: absolute;
       left: 20px;
       bottom: 20px;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.98);
       color: var(--brown);
       padding: 12px 16px;
       border-radius: 18px;
@@ -321,7 +256,7 @@
     .service-card,
     .differential-card,
     .experience-item {
-      background: rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.96);
       border: 1px solid rgba(91, 70, 54, 0.08);
       border-radius: var(--radius-md);
       padding: 24px;
@@ -344,7 +279,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(106, 156, 137, 0.14);
+      background: rgba(47, 163, 107, 0.12);
       color: var(--green);
       font-size: 1.25rem;
       margin-bottom: 16px;
@@ -397,7 +332,7 @@
       bottom: 16px;
       padding: 12px 14px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.98);
       color: var(--brown);
       font-weight: 700;
       font-size: 0.94rem;
@@ -414,7 +349,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      background: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.98);
     }
 
     .check {
@@ -422,7 +357,7 @@
       width: 42px;
       height: 42px;
       border-radius: 50%;
-      background: rgba(106, 156, 137, 0.15);
+      background: rgba(47, 163, 107, 0.12);
       color: var(--green);
       display: inline-flex;
       align-items: center;
@@ -473,14 +408,6 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
-    .site-footer {
-      padding: 28px 0;
-      background: #4b392d;
-      color: rgba(255, 255, 255, 0.85);
-      text-align: center;
-      font-size: 0.94rem;
-    }
-
     .floating-whatsapp {
       position: fixed;
       right: 20px;
@@ -503,16 +430,6 @@
     .floating-whatsapp:hover {
       transform: translateY(-3px) scale(1.03);
       box-shadow: 0 20px 34px rgba(37, 211, 102, 0.38);
-    }
-
-    .mobile-menu-button {
-      display: none;
-      border: none;
-      background: transparent;
-      color: var(--brown);
-      font-size: 1.1rem;
-      font-weight: 700;
-      cursor: pointer;
     }
 
     @media (max-width: 1024px) {
@@ -599,33 +516,13 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="brand-name">Carolina Barboza</span>
-        <span class="brand-role">Intérprete de Libras</span>
-      </div>
-
-      <button class="mobile-menu-button" aria-label="Abrir menu" id="menu-toggle">
-        Menu
-      </button>
-
-      <nav class="nav" id="main-nav">
-        <a href="#inicio">Início</a>
-        <a href="#atendimento">Atendimento</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#portfolio">Portfólio</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-  </header>
+  
 
   <main>
-    <section class="hero" id="inicio">
+    <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Interpretação profissional em Libras</span>
+          <span class="eyebrow">Portfólio profissional</span>
           <h1>Carolina Barboza</h1>
           <p class="role">Intérprete de Libras</p>
           <p class="subtitle">
@@ -655,16 +552,16 @@
 
         <div class="hero-card">
           <img src="FOTO 1.jpeg" alt="Carolina Barboza em atuação profissional como intérprete de Libras" />
-          <div class="hero-badge">Atuação profissional para eventos, congressos e produções.</div>
+          <div class="hero-badge">Portfólio visual para apresentação profissional.</div>
         </div>
       </div>
     </section>
 
-    <section class="section section-beige" id="atendimento">
+    <section class="section section-beige">
       <div class="container intro-layout">
         <div>
-          <span class="eyebrow">Atendimento profissional</span>
-          <h2 class="section-title">Atendimento profissional para:</h2>
+          <span class="eyebrow">Áreas de atuação</span>
+          <h2 class="section-title">Atendimento profissional para diferentes formatos de evento</h2>
           <p class="section-subtitle">
             Soluções de interpretação em Libras com postura profissional, clareza na comunicação e adaptação ao contexto de cada evento ou produção.
           </p>
@@ -714,9 +611,9 @@
       </div>
     </section>
 
-    <section class="section section-cream" id="servicos">
+    <section class="section section-cream">
       <div class="container">
-        <span class="eyebrow">Soluções oferecidas</span>
+        <span class="eyebrow">Serviços</span>
         <h2 class="section-title">Serviços realizados</h2>
         <p class="section-subtitle">
           Atuação pensada para diferentes formatos de evento e produção, mantendo consistência, responsabilidade e preparação técnica.
@@ -756,9 +653,9 @@
       </div>
     </section>
 
-    <section class="section section-white" id="portfolio">
+    <section class="section section-white">
       <div class="container">
-        <span class="eyebrow">Portfólio visual</span>
+        <span class="eyebrow">Portfólio</span>
         <h2 class="section-title">Experiência em eventos e produções</h2>
         <p class="section-subtitle">
           Registros reais de atuação em diferentes contextos profissionais, reforçando experiência prática e presença em eventos relevantes.
@@ -803,9 +700,9 @@
       </div>
     </section>
 
-    <section class="section section-beige" id="experiencia">
+    <section class="section section-beige">
       <div class="container">
-        <span class="eyebrow">Trajetória profissional</span>
+        <span class="eyebrow">Experiência profissional</span>
         <h2 class="section-title">Experiência em eventos como:</h2>
         <p class="section-subtitle">
           Participação em contextos institucionais, culturais e corporativos, reforçando credibilidade e preparo profissional para diferentes formatos de contratação.
@@ -895,13 +792,13 @@
       </div>
     </section>
 
-    <section class="section cta" id="contato">
+    <section class="section cta">
       <div class="container cta-box">
         <div>
-          <span class="eyebrow" style="color:#d8eee6;">Contato</span>
+          <span class="eyebrow" style="color:#D7F3E5;">Contato</span>
           <h2 class="section-title">Precisa de intérprete de Libras para seu evento?</h2>
           <p class="section-subtitle">
-            Entre em contato para alinhar sua necessidade e receber um atendimento profissional para eventos, congressos, transmissões e produções audiovisuais.
+            Entre em contato para apresentar sua demanda e receber um atendimento profissional para eventos, congressos, transmissões e produções audiovisuais.
           </p>
         </div>
 
@@ -927,11 +824,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>Carolina Barboza • Intérprete de Libras • Foz do Iguaçu e região</p>
-    </div>
-  </footer>
+  
 
   <a
     class="floating-whatsapp"
@@ -944,19 +837,6 @@
     W
   </a>
 
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('main-nav');
-
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-      });
-    });
-  </script>
+  
 </body>
 </html>
