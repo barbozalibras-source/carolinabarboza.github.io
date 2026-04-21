@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carolina Barboza | Intérprete de Libras</title>
+  <meta
+    name="description"
+    content="Portfólio profissional de Carolina Barboza, intérprete de Libras para eventos, congressos, produções audiovisuais e transmissões ao vivo em Foz do Iguaçu e região."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --brown: #5B4636;
+      --cream: #F5EFE6;
+      --green: #6A9C89;
+      --text: #374151;
+      --beige: #EADFD0;
+      --white: #ffffff;
+      --shadow: 0 18px 40px rgba(91, 70, 54, 0.12);
+      --shadow-soft: 0 10px 25px rgba(55, 65, 81, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --container: 1180px;
+      --transition: 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-cream {
+      background: var(--cream);
+    }
+
+    .section-beige {
+      background: var(--beige);
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--green);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--brown);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      max-width: 720px;
+      font-size: 1.02rem;
+      color: var(--text);
+      opacity: 0.92;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(106, 156, 137, 0.25);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--brown);
+      border-color: rgba(91, 70, 54, 0.2);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.45);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(245, 239, 230, 0.88);
+      border-bottom: 1px solid rgba(91, 70, 54, 0.08);
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      color: var(--brown);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .brand-role {
+      color: var(--text);
+      font-size: 0.86rem;
+      opacity: 0.85;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: var(--brown);
+      font-weight: 600;
+      font-size: 0.95rem;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: width var(--transition);
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      padding: 72px 0 88px;
+      background: var(--cream);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--brown);
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      line-height: 0.98;
+      margin-bottom: 14px;
+    }
+
+    .hero .role {
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      color: var(--brown);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero .subtitle {
+      font-size: 1.14rem;
+      max-width: 640px;
+      margin-bottom: 14px;
+    }
+
+    .hero .location {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      opacity: 0.9;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 540px;
+      background: #ddd;
+    }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--brown);
+      padding: 12px 16px;
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      font-weight: 700;
+      max-width: 250px;
+    }
+
+    .audience-grid,
+    .services-grid,
+    .differentials-grid {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .intro-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .intro-photo {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 440px;
+      background: #ddd;
+    }
+
+    .intro-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info-card,
+    .service-card,
+    .differential-card,
+    .experience-item {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(91, 70, 54, 0.08);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .info-card:hover,
+    .service-card:hover,
+    .differential-card:hover,
+    .experience-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 28px rgba(55, 65, 81, 0.12);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(106, 156, 137, 0.14);
+      color: var(--green);
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .card-text {
+      font-size: 0.97rem;
+      color: var(--text);
+    }
+
+    .portfolio-grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      min-height: 300px;
+      background: #ddd;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-label {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--brown);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    .experience-list {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .experience-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .check {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(106, 156, 137, 0.15);
+      color: var(--green);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .final-image-wrap {
+      margin-top: 44px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 380px;
+      background: #ddd;
+    }
+
+    .final-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cta {
+      background: var(--brown);
+      color: var(--white);
+    }
+
+    .cta .section-title,
+    .cta .section-subtitle {
+      color: var(--white);
+    }
+
+    .cta-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .cta .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.26);
+    }
+
+    .cta .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .site-footer {
+      padding: 28px 0;
+      background: #4b392d;
+      color: rgba(255, 255, 255, 0.85);
+      text-align: center;
+      font-size: 0.94rem;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1200;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #25d366;
+      color: var(--white);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      box-shadow: 0 16px 30px rgba(37, 211, 102, 0.3);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 20px 34px rgba(37, 211, 102, 0.38);
+    }
+
+    .mobile-menu-button {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--brown);
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .intro-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 460px;
+      }
+
+      .audience-grid,
+      .services-grid,
+      .differentials-grid,
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .experience-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 72px 0;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        padding: 14px 0;
+        flex-direction: column;
+      }
+
+      .mobile-menu-button {
+        display: inline-flex;
+      }
+
+      .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding-top: 12px;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+
+      .hero-card {
+        min-height: 380px;
+      }
+
+      .audience-grid,
+      .services-grid,
+      .differentials-grid,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn,
+      .btn-group a {
+        width: 100%;
+      }
+
+      .floating-whatsapp {
+        right: 16px;
+        bottom: 16px;
+        width: 60px;
+        height: 60px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-name">Carolina Barboza</span>
+        <span class="brand-role">Intérprete de Libras</span>
+      </div>
+
+      <button class="mobile-menu-button" aria-label="Abrir menu" id="menu-toggle">
+        Menu
+      </button>
+
+      <nav class="nav" id="main-nav">
+        <a href="#inicio">Início</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Interpretação profissional em Libras</span>
+          <h1>Carolina Barboza</h1>
+          <p class="role">Intérprete de Libras</p>
+          <p class="subtitle">
+            Interpretação profissional em Libras para eventos, congressos e produções audiovisuais.
+          </p>
+          <p class="location">Atendimento em Foz do Iguaçu e região.</p>
+
+          <div class="btn-group">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/5545984291240"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar no WhatsApp
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://instagram.com/carolbarbozas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="FOTO 1.jpeg" alt="Carolina Barboza em atuação profissional como intérprete de Libras" />
+          <div class="hero-badge">Atuação profissional para eventos, congressos e produções.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-beige" id="atendimento">
+      <div class="container intro-layout">
+        <div>
+          <span class="eyebrow">Atendimento profissional</span>
+          <h2 class="section-title">Atendimento profissional para:</h2>
+          <p class="section-subtitle">
+            Soluções de interpretação em Libras com postura profissional, clareza na comunicação e adaptação ao contexto de cada evento ou produção.
+          </p>
+
+          <div class="audience-grid">
+            <article class="info-card">
+              <div class="icon">01</div>
+              <h3 class="card-title">Produtoras de eventos</h3>
+              <p class="card-text">Atuação preparada para demandas de organização, cronograma e execução em eventos presenciais.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon">02</div>
+              <h3 class="card-title">Empresas</h3>
+              <p class="card-text">Suporte em ações corporativas, treinamentos, encontros institucionais e comunicações internas.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon">03</div>
+              <h3 class="card-title">Congressos</h3>
+              <p class="card-text">Interpretação com foco em fluidez, organização e seriedade em ambientes formais e técnicos.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon">04</div>
+              <h3 class="card-title">Eventos institucionais</h3>
+              <p class="card-text">Presença profissional para solenidades, encontros públicos e ações de representatividade.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon">05</div>
+              <h3 class="card-title">Transmissões ao vivo</h3>
+              <p class="card-text">Atuação adaptada para lives, coberturas em tempo real e eventos transmitidos online.</p>
+            </article>
+
+            <article class="info-card">
+              <div class="icon">06</div>
+              <h3 class="card-title">Produções audiovisuais</h3>
+              <p class="card-text">Interpretação para vídeos institucionais, materiais gravados e conteúdos com acessibilidade.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="intro-photo">
+          <img src="FOTO 2.jpeg" alt="Carolina Barboza em contexto profissional de atendimento e atuação em Libras" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cream" id="servicos">
+      <div class="container">
+        <span class="eyebrow">Soluções oferecidas</span>
+        <h2 class="section-title">Serviços realizados</h2>
+        <p class="section-subtitle">
+          Atuação pensada para diferentes formatos de evento e produção, mantendo consistência, responsabilidade e preparação técnica.
+        </p>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Interpretação em eventos presenciais</h3>
+            <p class="card-text">Atendimento para encontros, solenidades, apresentações, feiras e programações presenciais.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Interpretação em transmissões ao vivo</h3>
+            <p class="card-text">Participação em lives, transmissões institucionais e coberturas online com acessibilidade.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Interpretação para vídeos institucionais</h3>
+            <p class="card-text">Produções gravadas com comunicação clara e alinhamento com o objetivo do conteúdo.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Eventos culturais</h3>
+            <p class="card-text">Atuação em apresentações, ações culturais e ambientes que exigem sensibilidade de linguagem e contexto.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Congressos e palestras</h3>
+            <p class="card-text">Participação em ambientes formais com foco em organização, compreensão e entrega profissional.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="portfolio">
+      <div class="container">
+        <span class="eyebrow">Portfólio visual</span>
+        <h2 class="section-title">Experiência em eventos e produções</h2>
+        <p class="section-subtitle">
+          Registros reais de atuação em diferentes contextos profissionais, reforçando experiência prática e presença em eventos relevantes.
+        </p>
+
+        <div class="portfolio-grid">
+          <figure class="portfolio-item">
+            <img src="FOTO 3.jpeg" alt="Carolina Barboza atuando em evento real - foto 1 do portfólio" />
+            <figcaption class="portfolio-label">Evento real</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <img src="FOTO 4.jpeg" alt="Carolina Barboza em evento estruturado - foto 2 do portfólio" />
+            <figcaption class="portfolio-label">Evento relevante</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <img src="FOTO 5.jpeg" alt="Carolina Barboza em estúdio ou ambiente técnico - foto 3 do portfólio" />
+            <figcaption class="portfolio-label">Estúdio ou evento técnico</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <img src="FOTO 6.jpeg" alt="Carolina Barboza em evento cultural - foto 4 do portfólio" />
+            <figcaption class="portfolio-label">Evento cultural</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <img src="FOTO 7.jpeg" alt="Carolina Barboza em evento com estrutura profissional - foto 5 do portfólio" />
+            <figcaption class="portfolio-label">Evento com estrutura</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <img src="FOTO 8.jpeg" alt="Carolina Barboza em evento adicional - foto 6 do portfólio" />
+            <figcaption class="portfolio-label">Atuação recorrente</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <img src="FOTO 9.jpeg" alt="Carolina Barboza em novo contexto profissional - foto 7 do portfólio" />
+            <figcaption class="portfolio-label">Continuidade de atuação</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-beige" id="experiencia">
+      <div class="container">
+        <span class="eyebrow">Trajetória profissional</span>
+        <h2 class="section-title">Experiência em eventos como:</h2>
+        <p class="section-subtitle">
+          Participação em contextos institucionais, culturais e corporativos, reforçando credibilidade e preparo profissional para diferentes formatos de contratação.
+        </p>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <span class="check">✓</span>
+            <div>
+              <h3 class="card-title">CREA</h3>
+              <p class="card-text">Atuação em contexto institucional com postura e comunicação alinhadas ao ambiente.</p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="check">✓</span>
+            <div>
+              <h3 class="card-title">Câmara de Vereadores</h3>
+              <p class="card-text">Experiência em eventos e ações com formalidade, atenção ao contexto e responsabilidade técnica.</p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="check">✓</span>
+            <div>
+              <h3 class="card-title">Eventos institucionais</h3>
+              <p class="card-text">Participação em programações oficiais, solenidades e encontros com representatividade.</p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="check">✓</span>
+            <div>
+              <h3 class="card-title">Congressos</h3>
+              <p class="card-text">Atuação em ambientes que exigem ritmo, clareza, preparo e adaptação a múltiplos formatos.</p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <span class="check">✓</span>
+            <div>
+              <h3 class="card-title">Eventos culturais</h3>
+              <p class="card-text">Versatilidade para diferentes públicos, linguagens e contextos de apresentação.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cream">
+      <div class="container">
+        <span class="eyebrow">Diferenciais</span>
+        <h2 class="section-title">Compromisso com qualidade e profissionalismo</h2>
+        <p class="section-subtitle">
+          Uma atuação guiada por preparo, responsabilidade e alinhamento com a proposta de cada evento ou produção.
+        </p>
+
+        <div class="differentials-grid">
+          <article class="differential-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Experiência em eventos institucionais</h3>
+            <p class="card-text">Vivência em ambientes que exigem postura profissional, organização e precisão na execução.</p>
+          </article>
+
+          <article class="differential-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Comunicação clara com organizadores</h3>
+            <p class="card-text">Alinhamento objetivo para compreender a proposta do evento e garantir melhor entrega.</p>
+          </article>
+
+          <article class="differential-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Pontualidade e responsabilidade</h3>
+            <p class="card-text">Compromisso com prazos, horários e postura profissional em todas as etapas do atendimento.</p>
+          </article>
+
+          <article class="differential-card">
+            <div class="icon">✓</div>
+            <h3 class="card-title">Preparação técnica prévia</h3>
+            <p class="card-text">Cuidado com contexto, briefing e necessidades específicas de cada contratação.</p>
+          </article>
+        </div>
+
+        <div class="final-image-wrap">
+          <img src="FOTO 10.jpeg" alt="Carolina Barboza em imagem final de encerramento do portfólio" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="contato">
+      <div class="container cta-box">
+        <div>
+          <span class="eyebrow" style="color:#d8eee6;">Contato</span>
+          <h2 class="section-title">Precisa de intérprete de Libras para seu evento?</h2>
+          <p class="section-subtitle">
+            Entre em contato para alinhar sua necessidade e receber um atendimento profissional para eventos, congressos, transmissões e produções audiovisuais.
+          </p>
+        </div>
+
+        <div class="btn-group">
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/5545984291240"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar no WhatsApp
+          </a>
+          <a
+            class="btn btn-secondary"
+            href="https://instagram.com/carolbarbozas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Carolina Barboza • Intérprete de Libras • Foz do Iguaçu e região</p>
+    </div>
+  </footer>
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/5545984291240"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+    title="Falar no WhatsApp"
+  >
+    W
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
