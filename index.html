@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carolina Barboza | Intérprete de Libras</title>
+  <title>Carolina Barboza | Intérprete e Tradutora de Libras</title>
   <meta
     name="description"
-    content="Portfólio profissional de Carolina Barboza, intérprete de Libras para eventos, congressos, produções audiovisuais e transmissões ao vivo em Foz do Iguaçu e região."
+    content="Portfólio profissional de Carolina Barboza, intérprete e tradutora de Libras para eventos, congressos, produções audiovisuais e transmissões ao vivo em Foz do Iguaçu e região."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,16 +18,21 @@
 
   <style>
     :root {
-      --brown: #1E3A5F;
-      --cream: #FFFFFF;
-      --green: #2FA36B;
-      --text: #6B7280;
-      --beige: #F3F4F6;
-      --white: #ffffff;
-      --shadow: 0 18px 40px rgba(30, 58, 95, 0.12);
-      --shadow-soft: 0 10px 25px rgba(30, 58, 95, 0.08);
-      --radius-lg: 24px;
-      --radius-md: 18px;
+      --primary: #1E3A5F;
+      --primary-dark: #162c49;
+      --secondary: #2FA36B;
+      --secondary-dark: #238454;
+      --text: #4B5563;
+      --text-strong: #374151;
+      --bg: #FFFFFF;
+      --bg-alt: #F3F4F6;
+      --card: #FFFFFF;
+      --card-alt: #EAF1F7;
+      --border: rgba(30, 58, 95, 0.14);
+      --shadow: 0 18px 40px rgba(30, 58, 95, 0.14);
+      --shadow-soft: 0 10px 24px rgba(30, 58, 95, 0.10);
+      --radius-lg: 28px;
+      --radius-md: 20px;
       --radius-sm: 14px;
       --container: 1180px;
       --transition: 0.3s ease;
@@ -46,7 +51,7 @@
     body {
       font-family: 'Montserrat', sans-serif;
       color: var(--text);
-      background: var(--cream);
+      background: var(--bg);
       line-height: 1.6;
     }
 
@@ -60,10 +65,6 @@
       color: inherit;
     }
 
-    ul {
-      list-style: none;
-    }
-
     .container {
       width: min(100% - 32px, var(--container));
       margin: 0 auto;
@@ -73,41 +74,36 @@
       padding: 88px 0;
     }
 
-    .section-cream {
-      background: var(--cream);
-    }
-
-    .section-beige {
-      background: var(--beige);
-    }
-
     .section-white {
-      background: var(--white);
+      background: var(--bg);
+    }
+
+    .section-alt {
+      background: var(--bg-alt);
     }
 
     .eyebrow {
       display: inline-block;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--green);
+      color: var(--secondary);
       margin-bottom: 16px;
     }
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      color: var(--brown);
+      color: var(--primary);
       font-size: clamp(2rem, 4vw, 3.1rem);
-      line-height: 1.15;
+      line-height: 1.12;
       margin-bottom: 16px;
     }
 
     .section-subtitle {
-      max-width: 720px;
-      font-size: 1.02rem;
+      max-width: 760px;
+      font-size: 1.03rem;
       color: var(--text);
-      opacity: 0.92;
     }
 
     .btn-group {
@@ -121,42 +117,41 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      min-height: 52px;
+      min-height: 54px;
       padding: 14px 24px;
       border-radius: 999px;
       font-weight: 700;
       font-size: 0.98rem;
-      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition);
       border: 2px solid transparent;
       cursor: pointer;
     }
 
     .btn-primary {
-      background: var(--green);
-      color: var(--white);
+      background: var(--primary);
+      color: #fff;
       box-shadow: var(--shadow-soft);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(47, 163, 107, 0.22);
+      background: var(--primary-dark);
     }
 
     .btn-secondary {
-      background: transparent;
-      color: var(--brown);
-      border-color: rgba(91, 70, 54, 0.2);
+      background: var(--secondary);
+      color: #fff;
+      box-shadow: var(--shadow-soft);
     }
 
     .btn-secondary:hover {
       transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.45);
+      background: var(--secondary-dark);
     }
 
     .hero {
       padding: 72px 0 88px;
-      background: var(--cream);
+      background: linear-gradient(180deg, #eef3f8 0%, #ffffff 100%);
     }
 
     .hero-grid {
@@ -168,15 +163,15 @@
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      color: var(--brown);
-      font-size: clamp(2.6rem, 5vw, 4.8rem);
+      color: var(--primary);
+      font-size: clamp(2.7rem, 5vw, 4.9rem);
       line-height: 0.98;
       margin-bottom: 14px;
     }
 
     .hero .role {
       font-size: clamp(1.05rem, 2vw, 1.35rem);
-      color: var(--brown);
+      color: var(--primary);
       font-weight: 700;
       margin-bottom: 18px;
     }
@@ -185,13 +180,13 @@
       font-size: 1.14rem;
       max-width: 640px;
       margin-bottom: 14px;
+      color: var(--text-strong);
     }
 
     .hero .location {
       font-size: 1rem;
       font-weight: 600;
       color: var(--text);
-      opacity: 0.9;
     }
 
     .hero-card {
@@ -200,7 +195,8 @@
       overflow: hidden;
       box-shadow: var(--shadow);
       min-height: 540px;
-      background: #ddd;
+      background: #dfe7ef;
+      border: 1px solid var(--border);
     }
 
     .hero-card img {
@@ -213,22 +209,13 @@
       position: absolute;
       left: 20px;
       bottom: 20px;
-      background: rgba(255, 255, 255, 0.98);
-      color: var(--brown);
-      padding: 12px 16px;
+      background: rgba(30, 58, 95, 0.92);
+      color: #fff;
+      padding: 14px 18px;
       border-radius: 18px;
       box-shadow: var(--shadow-soft);
       font-weight: 700;
-      max-width: 250px;
-    }
-
-    .audience-grid,
-    .services-grid,
-    .differentials-grid {
-      margin-top: 38px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      max-width: 290px;
     }
 
     .intro-layout {
@@ -242,8 +229,9 @@
       border-radius: 28px;
       overflow: hidden;
       box-shadow: var(--shadow);
-      min-height: 440px;
-      background: #ddd;
+      min-height: 460px;
+      background: #dfe7ef;
+      border: 1px solid var(--border);
     }
 
     .intro-photo img {
@@ -252,16 +240,31 @@
       object-fit: cover;
     }
 
+    .audience-grid,
+    .services-grid,
+    .differentials-grid {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
     .info-card,
     .service-card,
     .differential-card,
     .experience-item {
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid rgba(91, 70, 54, 0.08);
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: var(--radius-md);
       padding: 24px;
       box-shadow: var(--shadow-soft);
       transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .info-card:nth-child(odd),
+    .service-card:nth-child(even),
+    .differential-card:nth-child(odd) {
+      background: var(--card-alt);
     }
 
     .info-card:hover,
@@ -269,33 +272,33 @@
     .differential-card:hover,
     .experience-item:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 28px rgba(55, 65, 81, 0.12);
+      box-shadow: 0 16px 28px rgba(30, 58, 95, 0.14);
     }
 
     .icon {
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
       border-radius: 14px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(47, 163, 107, 0.12);
-      color: var(--green);
-      font-size: 1.25rem;
+      background: rgba(47, 163, 107, 0.14);
+      color: var(--secondary);
+      font-size: 1.15rem;
       margin-bottom: 16px;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .card-title {
       font-size: 1.05rem;
       font-weight: 700;
-      color: var(--brown);
+      color: var(--primary);
       margin-bottom: 8px;
     }
 
     .card-text {
       font-size: 0.97rem;
-      color: var(--text);
+      color: var(--text-strong);
     }
 
     .portfolio-grid {
@@ -310,8 +313,9 @@
       overflow: hidden;
       border-radius: 24px;
       min-height: 300px;
-      background: #ddd;
+      background: #dfe7ef;
       box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border);
     }
 
     .portfolio-item img {
@@ -332,8 +336,8 @@
       bottom: 16px;
       padding: 12px 14px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.98);
-      color: var(--brown);
+      background: rgba(30, 58, 95, 0.9);
+      color: #fff;
       font-weight: 700;
       font-size: 0.94rem;
     }
@@ -349,7 +353,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      background: rgba(255, 255, 255, 0.98);
+      background: #fff;
     }
 
     .check {
@@ -357,8 +361,8 @@
       width: 42px;
       height: 42px;
       border-radius: 50%;
-      background: rgba(47, 163, 107, 0.12);
-      color: var(--green);
+      background: rgba(47, 163, 107, 0.14);
+      color: var(--secondary);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -372,7 +376,8 @@
       overflow: hidden;
       box-shadow: var(--shadow);
       min-height: 380px;
-      background: #ddd;
+      background: #dfe7ef;
+      border: 1px solid var(--border);
     }
 
     .final-image-wrap img {
@@ -382,13 +387,13 @@
     }
 
     .cta {
-      background: var(--brown);
-      color: var(--white);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
     }
 
     .cta .section-title,
     .cta .section-subtitle {
-      color: var(--white);
+      color: #fff;
     }
 
     .cta-box {
@@ -399,15 +404,6 @@
       flex-wrap: wrap;
     }
 
-    .cta .btn-secondary {
-      color: var(--white);
-      border-color: rgba(255, 255, 255, 0.26);
-    }
-
-    .cta .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
     .floating-whatsapp {
       position: fixed;
       right: 20px;
@@ -416,8 +412,8 @@
       width: 64px;
       height: 64px;
       border-radius: 50%;
-      background: #25d366;
-      color: var(--white);
+      background: #25D366;
+      color: #fff;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -459,31 +455,8 @@
         padding: 72px 0;
       }
 
-      .header-inner {
-        align-items: flex-start;
-        padding: 14px 0;
-        flex-direction: column;
-      }
-
-      .mobile-menu-button {
-        display: inline-flex;
-      }
-
-      .nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-        padding-top: 12px;
-      }
-
-      .nav.active {
-        display: flex;
-      }
-
       .hero {
-        padding-top: 44px;
+        padding-top: 48px;
       }
 
       .hero-card {
@@ -508,75 +481,59 @@
         width: 60px;
         height: 60px;
       }
-
-      .section-title {
-        font-size: 2rem;
-      }
     }
   </style>
 </head>
 <body>
-  
-
   <main>
     <section class="hero">
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Portfólio profissional</span>
           <h1>Carolina Barboza</h1>
-          <p class="role">Intérprete de Libras</p>
+          <p class="role">Intérprete e Tradutora de Libras</p>
           <p class="subtitle">
-            Interpretação profissional em Libras para eventos, congressos e produções audiovisuais.
+            Interpretação e tradução de Libras para eventos, congressos e produções audiovisuais.
           </p>
           <p class="location">Atendimento em Foz do Iguaçu e região.</p>
 
           <div class="btn-group">
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/5545984291240"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-primary" href="https://wa.me/5545984291240" target="_blank" rel="noopener noreferrer">
               Falar no WhatsApp
             </a>
-            <a
-              class="btn btn-secondary"
-              href="https://instagram.com/carolbarbozas"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="btn btn-secondary" href="https://instagram.com/carolbarbozas" target="_blank" rel="noopener noreferrer">
               Ver Instagram
             </a>
           </div>
         </div>
 
         <div class="hero-card">
-          <img src="FOTO 1.jpeg" alt="Carolina Barboza em atuação profissional como intérprete de Libras" />
+          <img src="FOTO 1.jpeg" alt="Carolina Barboza em atuação profissional como intérprete e tradutora de Libras" />
           <div class="hero-badge">Portfólio visual para apresentação profissional.</div>
         </div>
       </div>
     </section>
 
-    <section class="section section-beige">
+    <section class="section section-alt">
       <div class="container intro-layout">
         <div>
           <span class="eyebrow">Áreas de atuação</span>
           <h2 class="section-title">Atendimento profissional para diferentes formatos de evento</h2>
           <p class="section-subtitle">
-            Soluções de interpretação em Libras com postura profissional, clareza na comunicação e adaptação ao contexto de cada evento ou produção.
+            Soluções de interpretação e tradução de Libras com postura profissional, clareza na comunicação e adaptação ao contexto de cada evento ou produção.
           </p>
 
           <div class="audience-grid">
             <article class="info-card">
               <div class="icon">01</div>
               <h3 class="card-title">Produtoras de eventos</h3>
-              <p class="card-text">Atuação preparada para demandas de organização, cronograma e execução em eventos presenciais.</p>
+              <p class="card-text">Com vasta experiência, presto serviço para organizações, atuando na interpretação de eventos presenciais e online.</p>
             </article>
 
             <article class="info-card">
               <div class="icon">02</div>
               <h3 class="card-title">Empresas</h3>
-              <p class="card-text">Suporte em ações corporativas, treinamentos, encontros institucionais e comunicações internas.</p>
+              <p class="card-text">Suporte em ações corporativas, treinamentos, encontros institucionais e comunicação interna entre surdos e ouvintes.</p>
             </article>
 
             <article class="info-card">
@@ -600,18 +557,18 @@
             <article class="info-card">
               <div class="icon">06</div>
               <h3 class="card-title">Produções audiovisuais</h3>
-              <p class="card-text">Interpretação para vídeos institucionais, materiais gravados e conteúdos com acessibilidade.</p>
+              <p class="card-text">Interpretação e tradução de Libras para vídeos institucionais, materiais gravados e conteúdos com acessibilidade.</p>
             </article>
           </div>
         </div>
 
         <div class="intro-photo">
-          <img src="FOTO 2.jpeg" alt="Carolina Barboza em contexto profissional de atendimento e atuação em Libras" />
+          <img src="FOTO 2.jpeg" alt="Carolina Barboza em contexto profissional de atuação em Libras" />
         </div>
       </div>
     </section>
 
-    <section class="section section-cream">
+    <section class="section section-white">
       <div class="container">
         <span class="eyebrow">Serviços</span>
         <h2 class="section-title">Serviços realizados</h2>
@@ -634,7 +591,7 @@
 
           <article class="service-card">
             <div class="icon">✓</div>
-            <h3 class="card-title">Interpretação para vídeos institucionais</h3>
+            <h3 class="card-title">Tradução de Libras para vídeos institucionais</h3>
             <p class="card-text">Produções gravadas com comunicação clara e alinhamento com o objetivo do conteúdo.</p>
           </article>
 
@@ -653,7 +610,7 @@
       </div>
     </section>
 
-    <section class="section section-white">
+    <section class="section section-alt">
       <div class="container">
         <span class="eyebrow">Portfólio</span>
         <h2 class="section-title">Experiência em eventos e produções</h2>
@@ -700,7 +657,7 @@
       </div>
     </section>
 
-    <section class="section section-beige">
+    <section class="section section-white">
       <div class="container">
         <span class="eyebrow">Experiência profissional</span>
         <h2 class="section-title">Experiência em eventos como:</h2>
@@ -752,7 +709,7 @@
       </div>
     </section>
 
-    <section class="section section-cream">
+    <section class="section section-alt">
       <div class="container">
         <span class="eyebrow">Diferenciais</span>
         <h2 class="section-title">Compromisso com qualidade e profissionalismo</h2>
@@ -796,35 +753,23 @@
       <div class="container cta-box">
         <div>
           <span class="eyebrow" style="color:#D7F3E5;">Contato</span>
-          <h2 class="section-title">Precisa de intérprete de Libras para seu evento?</h2>
+          <h2 class="section-title">Precisa de intérprete e tradutora de Libras para seu evento?</h2>
           <p class="section-subtitle">
             Entre em contato para apresentar sua demanda e receber um atendimento profissional para eventos, congressos, transmissões e produções audiovisuais.
           </p>
         </div>
 
         <div class="btn-group">
-          <a
-            class="btn btn-primary"
-            href="https://wa.me/5545984291240"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="btn btn-secondary" href="https://wa.me/5545984291240" target="_blank" rel="noopener noreferrer">
             Falar no WhatsApp
           </a>
-          <a
-            class="btn btn-secondary"
-            href="https://instagram.com/carolbarbozas"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="btn btn-primary" href="https://instagram.com/carolbarbozas" target="_blank" rel="noopener noreferrer">
             Ver Instagram
           </a>
         </div>
       </div>
     </section>
   </main>
-
-  
 
   <a
     class="floating-whatsapp"
@@ -836,7 +781,5 @@
   >
     W
   </a>
-
-  
 </body>
 </html>
